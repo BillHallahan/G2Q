@@ -32,7 +32,7 @@ source-repository head
 
 
 library
-  exposed-modules:       G2Q.Base
+  exposed-modules:       G2Q.Interface
   -- other-modules:       
   -- other-extensions:    
   build-depends:         base >=4.10 && <4.11
