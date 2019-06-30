@@ -6,16 +6,6 @@ version:             0.1.0.0
 synopsis:            G2Q allows constraint programming, via writing Haskell predicates.
 description:         G2Q allows constraint programming, via writing Haskell predicates.
                      A quasiquoter, g2, is provided which can take concrete arguments at runtime, and solve for unknown symbolic arguments.
-                     For example, to find inputs from a list xs which sum to a given number n, you can write:
-
-                     ```
-                     sumToN :: Int -> [Int] -> IO (Maybe [Int])
-                     sumToN = [g2| \(n :: Int) (xs :: [Int]) ->
-                                   ?(ys :: [Int])
-                                 |  sum ys == n
-                                 && all (\e -> e `elem` xs) ys
-                                 && length ys >= 1 |]
-                     ```
 license:             BSD3
 license-file:        LICENSE
 author:              William Hallahan, Anton Xue
@@ -23,7 +13,7 @@ maintainer:          william.hallahan@yale.edu
 -- copyright:           
 category:            Formal Methods, Symbolic Computation
 build-type:          Simple
-extra-source-files:  ChangeLog.md
+extra-source-files:  README.md, ChangeLog.md
 cabal-version:       >=1.10
 
 source-repository head
